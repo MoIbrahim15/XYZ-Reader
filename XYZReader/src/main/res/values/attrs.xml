@@ -2,4 +2,13 @@
     <declare-styleable name="DrawInsetsFrameLayout">
         <attr name="insetBackground" format="color|reference" />
     </declare-styleable>
+
+
+    <attr name="fontType">
+        <enum name="rosarioRegular" value="10" />
+    </attr>
+
+    <declare-styleable name="CustomTextView">
+        <attr name="fontType" />
+    </declare-styleable>
 </resources>

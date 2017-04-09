@@ -8,5 +8,8 @@
     <string name="action_share">Share</string>
 
     <string name="up">Up</string>
+    <string name="image_details">Image in Details</string>
 
+    <!--Fonts-->
+    <string name="rosario_regular" translatable="false">fonts/Rosario-Regular.ttf</string>
 </resources>
