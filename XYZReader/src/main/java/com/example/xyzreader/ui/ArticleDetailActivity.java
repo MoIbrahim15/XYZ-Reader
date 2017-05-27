@@ -42,10 +42,10 @@ public class ArticleDetailActivity extends AppCompatActivity
                 .applyDimension(TypedValue.COMPLEX_UNIT_DIP, 1, getResources().getDisplayMetrics()));
         mPager.setPageMarginDrawable(new ColorDrawable(0x22000000));
 
-        mPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
+        mPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
-            public void onPageScrollStateChanged(int state) {
-                super.onPageScrollStateChanged(state);
+            public void onPageScrolled(int i, float v, int i1) {
+
             }
 
             @Override
@@ -54,8 +54,11 @@ public class ArticleDetailActivity extends AppCompatActivity
                     mCursor.moveToPosition(position);
                 }
             }
-        });
 
+            @Override
+            public void onPageScrollStateChanged(int i) {
+            }
+        });
 
         if (savedInstanceState == null) {
             if (getIntent() != null && getIntent().getData() != null) {
